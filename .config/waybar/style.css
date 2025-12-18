@@ -1,5 +1,7 @@
+@import "./wallust/colors.css";
+
 * {
-    font-family: 'JetBrainsMono Nerd Font Mono'; 
+    font-family: 'Font Awesome 6 Free', 'JetBrainsMono Nerd Font', 'Symbols Nerd Font', monospace; 
     font-size: 11px;
     color: white;
     margin-right: 3px;
@@ -17,37 +19,18 @@ window#waybar {
     background-color: transparent;
 }
 
-#custom-power {
-    background-color: red;
-}
-
-#cpu {
-    background-color: rgb(55, 4, 117);
-}
-
-#temperature {
-    background-color: rgb(19, 100, 189);  
-}
-
-#temperature.critical {
-    background-color: red;
-}
-
-#memory {
-    background-color: rgb(55, 4, 117); 
-} 
-
 #workspaces {
-    background-color: rgb(19, 100, 189); 
+    background-color: @first-color; 
 }
 
 #workspaces button {
     color: transparent;
     background-color: transparent;
+
     font-weight: bold; 
-    padding: 0px;
+    padding: 1px;
     margin: 2px 1px 2px 1px;
-    text-shadow: 1px 1px 2px black; 
+    text-shadow: 1px 1px 2px black;  
 }
 
 #workspaces button:hover {
@@ -60,19 +43,45 @@ window#waybar {
     background-color: rgb(53, 141, 204);
 }
 
+#memory {
+    background-color: @second-color; 
+}
+
+#temperature {
+    background-color: @first-color;  
+}
+
+#temperature.critical {
+    background-color: red;
+}
+
+#cpu {
+    background-color: @second-color;
+}
+
+#custom-clipboard {
+    background-color: @second-color;
+}
+
 #pulseaudio {
-    background-color: rgb(19, 100, 189);
+    background-color: @first-color;
 }
 
 #backlight {
-    background-color: rgb(55, 4, 117);
+    background-color: @second-color;
 }
 
 #network {
-    background-color: rgb(19, 100, 189);
+    background-color: @first-color;
 }
 
 #battery {
-    background-color: rgb(55, 4, 117);
+    background-color: @second-color;
 }
+
+#custom-power {
+    background-color: red;
+    padding-right: 7px;
+} 
+
 
