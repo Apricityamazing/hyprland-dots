@@ -12,6 +12,7 @@ These are my hyprland dots that I daily drive. I am making an using these on Arc
 
 ### Terminal Emulator: Kitty
 Shell: [zsh](https://www.zsh.org/)
+
 Theme: [agnoster](https://github.com/agnoster/agnoster-zsh-theme) using [oh-my-zsh](https://ohmyz.sh/)
 
 ### App Launcher: Rofi
