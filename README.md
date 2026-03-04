@@ -5,6 +5,7 @@ These are my hyprland dots that I daily drive, if you would like to use them, I 
 - [ ] Fastfetch config
 - [ ] Clock that is displayed on the background layer
 - [X] List dependencies
+*Some dependencies may still be missing, but I believe most are listed
 
 ## Programs in use
 ### File Manager: Thunar
