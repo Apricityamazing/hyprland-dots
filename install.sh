@@ -36,12 +36,13 @@ check_dep() {
     cd yay 
     echo "It is NEVER a good idea to install a package from the AUR without reading the PKGBUILD"
     echo "Would you like to read the PKGBUILD to check that yay isn't malicious? [Y/n]:"
-    read -n 1 -r u
+    read -n 1 -r user_input
     user_input=${user_input:-y}
-    if [[ "$user_input" =~ ^[Yy]$ ]]; then
-      exec $PAGER PKGBUILD
+    if [[ "$user_input" =~ ^[Yy]$ ]]; then 
+      $PAGER PKGBUILD
     fi
     makepkg -si
+    cd ..
 }
 
 # Flow of Script
@@ -68,7 +69,7 @@ esac
 # Install Dependencies for config
 echo 
 echo "Installing Dependencies..."
-sudo pacman -S $(awk '{print $1}' ./dependencies)
+sudo pacman -S $(awk '{print $1}' dependencies)
 echo 
 echo "Overwritting .config directory"
-mv -f --backup=.configbak ./.config ~/.config
+mv -f --backup=existing ./.config ~/.config
