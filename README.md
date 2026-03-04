@@ -1,11 +1,10 @@
 # hyprland-dots
-These are my hyprland dots that I daily drive. I am making an using these on Arch, so if anyone would like to use them, on a different distro, you may have to tinker with it if there are specific packages in use that aren't on other distros.
-
+These are my hyprland dots that I daily drive, if you would like to use them, I recommend installing them on a minimal arch install. These dot files do not come with a display manager, and the installation script will only work on Arch linux, as that is the distro I use. These dotfiles are not user friendly, and you will need to explore them before you can understand how to use them.
 ## Plans:
 - [ ] Implement wallust support
 - [ ] Fastfetch config
 - [ ] Clock that is displayed on the background layer
-- [ ] List dependencies
+- [X] List dependencies
 
 ## Programs in use
 ### File Manager: Thunar
