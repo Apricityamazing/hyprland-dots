@@ -9,11 +9,17 @@ These are my hyprland dots that I daily drive, if you would like to use them, I 
 
 ## Programs in use
 ### File Manager: Thunar
+Theme: Adwaita-dark
+
+Icons: Breeze Dark
 
 ### Terminal Emulator: Kitty
 Shell: [zsh](https://www.zsh.org/)
 
 Theme: [agnoster](https://github.com/agnoster/agnoster-zsh-theme) using [oh-my-zsh](https://ohmyz.sh/)
+
+Colorscheme: [Lagoon - oasis.nvim](https://github.com/uhs-robert/oasis.nvim?tab=readme-ov-file)
+**This color theme is directly included in the kitty config directory, please support oasis.nvim directly!** 
 
 ### App Launcher: Rofi
 Theme : material
