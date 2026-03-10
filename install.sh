@@ -55,11 +55,17 @@ check_dep() {
     
   case $user_input in
     [Yy])
-    #Configure ly
+    echo "This is currently not working"
+    echo "What would you like to configure?"
+    echo "1. Animation"
+    echo "2. Password mask"
+    echo "3. Clock"
+    break
+    # read -n 1 ly_config_input 
     ;;
     
     [Nn])
-    continue
+    break
     ;;
     
     [*])
@@ -149,7 +155,8 @@ user_input = ${user_input=-y}
    [Yy] ) 
      # Install Ly
      sudo pacman -S ly
-     sudo systemctl enable ly.service
+     sudo systemctl enable ly@tty2.service
+     sudo systemctl disable getty@tty2.service
      configure_ly
      break
      ;;
