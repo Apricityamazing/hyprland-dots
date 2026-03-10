@@ -71,6 +71,33 @@ check_dep() {
 done
   }
 
+install_oh-my-zsh(){
+  while true; do
+    echo "The default shell in these dotfiles is zsh, but the theme used is from oh-my-zsh"
+    echo "Would you like to install oh-my-zsh? [Y/n]"
+    read -n 1 user_input
+    user_input = ${user_input=-y}
+
+    case $user_input in
+      [Yy])
+      # oh-my-zsh install script
+      sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+      break
+      ;;
+
+      [Nn])
+      break 
+      ;;
+
+      [*])
+      echo "Invalid input. Try again."
+      echo
+      install_oh-my-zsh
+      ;;
+    esac
+  done
+  }
+
 
 # Flow of Script
 
@@ -106,7 +133,10 @@ echo
 echo "Installing Dependencies..."
 sudo pacman -S $(awk '{print $1}' dependencies)
 echo 
-echo "Overwritting .config directory"
+# Ask to install_oh-my-zsh 
+install_oh-my-zsh
+echo ".config directory will be backed up as .config-bak"
+echo " Overwritting .config directory"
 mv -f --backup=existing ./.config ~/.config
 
 # Ask to install ly
@@ -132,6 +162,4 @@ user_input = ${user_input=-y}
     ;;
   esac
 done
-
- 
 
