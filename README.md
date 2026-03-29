@@ -21,11 +21,18 @@ Theme: [agnoster](https://github.com/agnoster/agnoster-zsh-theme) using [oh-my-z
 Colorscheme: [Lagoon - oasis.nvim](https://github.com/uhs-robert/oasis.nvim?tab=readme-ov-file)
 **This color theme is directly included in the kitty config directory, please support oasis.nvim directly!** 
 
+Location: ~/.config/kitty/
 ### App Launcher: Rofi
-Theme : material
+Theme: material
 
 ### Status Bar: Waybar
-Config : Custom written by me
+Config: Custom 
 
+Location: ~/.config/waybar/
+
+### Clock: Waybar
+Config: Custom
+
+Location: ~/.config/waybar-clock/
 ### Notification Daemon: dunst
 
