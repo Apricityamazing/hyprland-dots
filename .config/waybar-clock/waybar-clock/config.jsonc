@@ -1,0 +1,18 @@
+{
+    "layer": "bottom",
+    "position": "top",
+    "margin-top": 50,
+    "exclusive": false,
+    "passthrough": true,
+    "modules-center": ["clock"],
+    "modules-left": [],
+    "modules-right": [],
+
+    "clock": {
+        "format": "<span size=\"larger\">{:%H:%M<span size=\"x-small\">\n%d %b %y</span>}</span>", 
+        "tooltip": false,
+        "interval": 60,
+        "justify": "center"  
+    }
+}
+

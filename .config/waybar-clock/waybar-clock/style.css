@@ -1,0 +1,14 @@
+window#waybar {
+  background: transparent;
+  border: none;
+}
+
+#clock {
+  font-family: Impact;
+  font-size: 70px;
+  font-weight: bold;
+  color: #CDE0E7;
+  background: rgba(0, 0, 0, 0); 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  
+  padding: 10px;
+}
