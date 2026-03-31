@@ -18,7 +18,7 @@ check_dep() {
     echo "Checking for Dependencies..."
     if ! (check_dep "base-devel") || ! (check_dep "git"); then
       echo -n "Required dependencies are missing. Install them? [Y/n]:"
-      read -n 1 -r user_input
+      read -rn 1 -r user_input
       user_input=${user_input:-y}
       echo
 
@@ -27,16 +27,16 @@ check_dep() {
         sudo pacman -S --needed base-devel git 
       else 
         echo "Cannot proceed without dependencies. Exiting."
-        continue
+        return
       fi
     fi
 
     # Actually build yay
     git clone https://aur.archlinux.org/yay.git
-    cd yay 
+    'cd yay || exit'
     echo "It is NEVER a good idea to install a package from the AUR without reading the PKGBUILD"
     echo "Would you like to read the PKGBUILD to check that yay isn't malicious? [Y/n]:"
-    read -n 1 -r user_input
+    read -rn 1 user_input
     user_input=${user_input:-y}
     if [[ "$user_input" =~ ^[Yy]$ ]]; then 
       $PAGER PKGBUILD
@@ -44,30 +44,22 @@ check_dep() {
     makepkg -si
     cd ..
 }
-
-    
-# Defined configure_ly function
+ 
+  # Defined configure_ly function
   configure_ly(){
     while true; do
-    echo "Would you like to configure ly? [Y/n]"
-    read -n 1 user_input
-    user_input = ${user_input=-y}
+    echo "Would you like to use my ly configuration [Y/n]"
+    read -rn 1 user_input
+    user_input=${user_input=-y}
     
   case $user_input in
-    [Yy])
-    echo "This is currently not working"
-    echo "What would you like to configure?"
-    echo "1. Animation"
-    echo "2. Password mask"
-    echo "3. Clock"
+    [Yy]) 
+    sudo cp -fb ./.config/ly/config.ini /etc/ly/config.ini
     break
-    # read -n 1 ly_config_input 
     ;;
-    
     [Nn])
     break
-    ;;
-    
+    ;; 
     [*])
     echo "Invalid input. Try again."
     echo
@@ -81,8 +73,8 @@ install_oh-my-zsh(){
   while true; do
     echo "The default shell in these dotfiles is zsh, but the theme used is from oh-my-zsh"
     echo "Would you like to install oh-my-zsh? [Y/n]"
-    read -n 1 user_input
-    user_input = ${user_input=-y}
+    read -rn 1 user_input
+    user_input=${user_input=-y}
 
     case $user_input in
       [Yy])
@@ -113,7 +105,7 @@ while true; do
 echo -n "Do you want to install yay (aur package manager)? [Y/n]:" 
 
 # Reads user input, making sure only one character can be input
-read -n 1 -r user_input
+read -rn 1 -r user_input
 user_input=${user_input:-y}
 
   case $user_input in
@@ -137,19 +129,19 @@ done
 
 echo 
 echo "Installing Dependencies..."
-sudo pacman -S $(awk '{print $1}' dependencies)
+sudo pacman -S '$(awk ''{print $1}'' dependencies)'
 echo 
 # Ask to install_oh-my-zsh 
 install_oh-my-zsh
 echo ".config directory will be backed up as .config-bak"
 echo " Overwritting .config directory"
-mv -f --backup=existing ./.config ~/.config
+sudo cp -bf ./.config ~/.config
 
 # Ask to install ly
 while true; do
 echo "Would you like to install ly (TUI display manager)? [Y/n]"
-read -n 1 user_input
-user_input = ${user_input=-y}
+read -rn 1 user_input
+user_input=${user_input=-y}
 
   case $user_input in
    [Yy] ) 
