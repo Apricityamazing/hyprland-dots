@@ -160,6 +160,8 @@ user_input=${user_input=-y}
   esac
 done
 # Set GTK and QT theme defaults
+echo "Setting GTK and QT defaults in /etc/environment"
+echo
 echo -e "GTK_THEME=Breeze:dark\n\
 GTK2_RC_FILES=/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc\n\
 QT_STYLE_OVERRIDE=Breeze-Dark" | sudo tee -a /etc/environment
