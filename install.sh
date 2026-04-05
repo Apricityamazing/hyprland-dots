@@ -52,7 +52,7 @@ check_dep() {
     
   case $user_input in
     [Yy]) 
-    sudo cp -fb ./.config/ly/config.ini /etc/ly/config.ini
+    sudo cp -fb ./config/ly/config.ini /etc/ly/config.ini
     break
     ;;
     [Nn])
@@ -132,8 +132,8 @@ echo
 # Ask to install_oh-my-zsh 
 install_oh-my-zsh
 echo ".config directory will be backed up as .config-bak"
-echo " Overwritting .config directory"
-sudo cp -bf ./.config ~/.config
+echo " Overwritting existing configurations"
+sudo cp -bf ./config/* ~/.config
 
 # Ask to install ly
 while true; do
