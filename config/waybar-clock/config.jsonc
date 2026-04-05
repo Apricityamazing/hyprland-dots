@@ -9,7 +9,10 @@
     "modules-right": [],
 
     "clock": {
-        "format": "<span size=\"larger\">{:%H:%M<span size=\"x-small\">\n%d %b %y</span>}</span>", 
+       // 12 hour format
+        "format": "<span size=\"larger\">{:%I:%M %p<span size=\"x-small\">\n%d %b %y</span>}</span>",
+       // 24 hour format
+       // "format": "<span size=\"larger\">{:%H:%M<span size=\"x-small\">\n%d %b %y</span>}</span>", 
         "tooltip": false,
         "interval": 60,
         "justify": "center"  
