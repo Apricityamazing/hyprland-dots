@@ -4,6 +4,7 @@ These are my hyprland dots that I daily drive, if you would like to use them, I 
 - [ ] Fastfetch config
 - [X] Clock that is displayed on the background layer
 - [X] List dependencies
+- [ ] Add AUR dependencies into a list, and add them to install script
 *Some dependencies may still be missing, but I believe most are listed
 
 ## Programs in use
