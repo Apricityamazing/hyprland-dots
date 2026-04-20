@@ -60,8 +60,13 @@ window#waybar {
     background-color: @second-color;
 }
 
+#idle_inhibitor {
+  background-color: @first-color; 
+  padding-right: 9px;
+}
+
 #custom-clipboard {
-    background-color: @second-color;
+    background-color: @second-color;    
 }
 
 #pulseaudio {
