@@ -1,10 +1,10 @@
 # hyprland-dots
 These are my hyprland dots that I daily drive, if you would like to use them, I recommend installing them on a minimal arch install. These dot files do not come with a display manager, and the installation script will only work on Arch linux, as that is the distro I use. These dotfiles are not user friendly, and you will need to explore them before you can understand how to use them.
 ## Plans:
-- [ ] Fastfetch config
+- [X] Fastfetch config
 - [X] Clock that is displayed on the background layer
 - [X] List dependencies
-- [ ] Add AUR dependencies into a list, and add them to install script
+- [X] Add AUR dependencies into a list, and add them to install script
 *Some dependencies may still be missing, but I believe most are listed
 
 ## Programs in use
@@ -31,7 +31,7 @@ Config: Custom
 Location: ~/.config/waybar/
 
 ### Clock: Waybar
-Config: Custom
+Config: Custo
 
 Location: ~/.config/waybar-clock/
 ### Notification Daemon: dunst
