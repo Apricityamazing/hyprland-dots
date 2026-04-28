@@ -1,5 +1,8 @@
 # hyprland-dots
 These are my hyprland dots that I daily drive, if you would like to use them, I recommend installing them on a minimal arch install. These dot files do not come with a display manager, and the installation script will only work on Arch linux, as that is the distro I use. These dotfiles are not user friendly, and you will need to explore them before you can understand how to use them.
+
+![Picture of config](./pictures/config_picture)
+
 ## Plans:
 - [X] Fastfetch config
 - [X] Clock that is displayed on the background layer
