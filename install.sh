@@ -42,6 +42,29 @@ check_dep() {
     makepkg -si
     cd ..
 }
+install_AUR() {
+  while true; do
+  echo "Would you like to install the AUR Dependencies? [Y/n]"
+  echo "Please note that if you choose not to, some keybinds and theming will need to be manually configured."
+  read -rn 1 user_input
+  user_input=${user_input=-y}
+  
+  case $user_input in
+    [Yy]) 
+    yay -S '$(awk ''{print $1}'' AUR-dependencies)'
+    break
+    ;;
+    [Nn])
+    break
+    ;; 
+    [*])
+    echo "Invalid input. Try again."
+    echo
+    install_AUR 
+    ;;
+  esac
+done 
+  }
  
   # Defined configure_ly function
   configure_ly(){
