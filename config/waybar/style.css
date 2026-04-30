@@ -1,5 +1,4 @@
-@define-color first-color rgb(19, 100, 189);
-@define-color second-color rgb(55, 4, 117);
+@import url("wallust.css");
 
 * {
     font-family: 'Font Awesome 6 Free', 'JetBrainsMono Nerd Font', 'Symbols Nerd Font', monospace; 
