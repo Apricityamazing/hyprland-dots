@@ -9,9 +9,9 @@ These are my hyprland dots that I daily drive, if you would like to use them, I 
 - [X] List dependencies
 - [X] Add AUR dependencies into a list, and add them to install script
 *Some dependencies may still be missing, but I believe most are listed
-- [] Add support to make these dots more easy to change entire theme with wallust
-- [] Add a custom rofi config
-- [] Add a wallpaper selector using rofi 
+- [ ] Add support to make these dots more easy to change entire theme with wallust
+- [ ] Add a custom rofi config
+- [ ] Add a wallpaper selector using rofi 
 
 ## Programs in use
 ### File Manager: Thunar
