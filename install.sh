@@ -183,3 +183,6 @@ user_input=${user_input=-y}
   esac
 done
 
+echo "Creating necessary directories."
+mkdir ~/Screenshots/
+echo "Script Finished!"
