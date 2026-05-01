@@ -1,0 +1,12 @@
+backend = "full"
+palette = "dark16"
+fallback_generator = "complementary"
+[templates]
+waybar.template = "waybar"
+waybar.target = "~/.config/waybar/wallust.css"
+colors.template = "all-colors"
+colors.target = "~/.config/wallust/colors"
+hyprland.template = "hyprland.conf"
+hyprland.target = "~/.config/hypr/colors.conf"
+hyprlock.template = "hyprlock.conf"
+hyprlock.target = "~/.config/hypr/hyprlock.conf"

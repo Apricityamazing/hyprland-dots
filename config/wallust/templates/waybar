@@ -1,0 +1,4 @@
+/* This only defines colors to be used in styles.css, this should not be edited directly */
+@define-color first-color {{color5}};
+@define-color second-color {{color13}};
+@define-color active-button {{color5 | lighten(0.2)}};
