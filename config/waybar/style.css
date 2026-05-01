@@ -40,7 +40,7 @@ window#waybar {
 } 
 
 #workspaces button.active {
-    background-color: rgb(53, 141, 204);
+    background-color: @active-button;
 }
 
 #memory {
