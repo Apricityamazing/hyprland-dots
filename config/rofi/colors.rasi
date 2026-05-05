@@ -1,0 +1,25 @@
+/* These colors are generated from your background at $HOME/.config/hypr/hyprpaper/wallpapers/ */
+
+* {
+  color0:             #393939; 
+  color1:             #0D0D0D; 
+  color2:             #1E172B;
+  color3:             #151F0D; 
+  color4:             #112F46; 
+  color5:             #104E96; 
+  color6:             #2073BF; 
+  color7:             #8CC4F6; 
+  color8:             #6289AC; 
+  color9:             #111111;
+  color10:            #281F3A;
+  color11:            #1C2A11;
+  color12:            #163F5D;
+  color13:            #1568C8;
+  color14:            #2A9AFEF2;
+  selected-button:    #8CC4F6;
+  background:         #111111;
+  normal-foreground:  #B4DCFFF2;
+  handle-color:       #7E9AB2F2;
+  selected:           #99BBD9;
+  cursor:             #6E7D9C; 
+}

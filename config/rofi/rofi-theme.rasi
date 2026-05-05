@@ -1,0 +1,84 @@
+@theme "~/.config/rofi/colors.rasi"
+
+* {
+  background-color: transparent;
+}
+
+window { 
+  background-color: var(normal-foreground); 
+  children: [ inputbar, mode-switcher, listview ];
+  padding: 5px; 
+}
+
+button {
+  color: white;
+  border: 1px solid;
+  margin: 3px;
+}
+
+button.selected {
+  background-color: var(selected-button);
+}
+
+entry { 
+  cursor: text; 
+}
+
+element {
+  orientation: horizontal;
+  children: [ element-icon, element-text ]; 
+  spacing: 5px; 
+  border-radius: 3px;
+}
+
+element.selected {
+  background-color: var(selected);
+}
+
+entry, element-text {
+  text-color: black;
+}
+
+element-text {
+  vertical-align: 0.5;
+}
+
+element-icon {
+  size: 2.5em;
+  padding: 5px; 
+}
+
+inputbar {
+  padding: 15px 3px;  
+  spacing: 0px; 
+  text-color: inherit;
+  children:  [prompt, textbox-prompt-colon, entry ];
+}
+
+prompt {
+  margin: 0px 3px;
+  text-color: var(color13);
+}
+
+textbox-prompt-colon {
+  margin: 0px 1.0000ch 0px 0px;
+  expand: false;
+  str: ":";
+  text-color: var(color13);
+}
+
+listview {
+  columns: 2; 
+  scrollbar: true;
+  padding: 2px 0px 0px;
+}
+
+scrollbar {
+  background-color: var(normal-foreground);
+  margin: 5px;
+  padding: 0;
+  handle-width: 8px;
+  border: 0;
+  handle-color: var(handle-color);
+}
+
