@@ -12,7 +12,7 @@ These are my hyprland dots that I daily drive, if you would like to use them, I 
 - [ ] Add support to make these dots more easy to change entire theme with wallust
 - [ ] Add a custom rofi config
 - [ ] Add a wallpaper selector using rofi 
-
+- [ ] Fix keybinds that open windows in a special workspace
 ## Programs in use
 ### File Manager: Thunar
 Theme: Adwaita-dark
