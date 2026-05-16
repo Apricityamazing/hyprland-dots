@@ -5,6 +5,6 @@ Menu = "rofi -show drun"
 Browser = "firefox"
 MailClient = "betterbird"
 MessagingClient = "vesktop"
-SystemMonitor = "btop" -- This only works with non-graphical system monitors
+SystemMonitor = "btop"
 
 
