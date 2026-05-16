@@ -8,10 +8,9 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(Browser))
 hl.bind(mainMod .. " + return", hl.dsp.exec_cmd(Terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(FileManager))
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(Menu))
-hl.bind(mainMod .. " + G", hl.dsp.exec_cmd("hyprctl clients | grep -q '" .. MailClient .. "' && hyprctl dispatch togglespecialworkspace mail || " .. MailClient))
-hl.bind(mainMod .. " + M", hl.dsp.exec_cmd("hyprctl clients | grep -q '" .. SystemMonitor .. "' && hyprctl dispatch togglespecialworkspace mail || " .. SystemMonitor))
-hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("hyprctl clients | grep -q" .. MessagingClient .. "&& hyprctl dispatch togglespecialworkspace mail ||" .. MessagingClient))
-
+hl.bind(mainMod .. " + G", hl.dsp.exec_cmd(MailClient))
+hl.bind(mainMod .. " + M", hl.dsp.exec_cmd(Terminal .. " " .. SystemMonitor))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd(MessagingClient))
 -- Miscellaneous programs + scripts
 hl.bind(mainMod .. " + SHIFT + P", hl.dsp.exec_cmd("hyprpicker - a"))
 hl.bind(mainMod .. " + SHIFT + M", hl.dsp.exec_cmd("hyprshutdown"))
@@ -26,7 +25,8 @@ hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.kill())
 hl.bind(mainMod .. " + SHIFT + space", hl.dsp.window.float({ action = "float"}))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
---hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = "None", client = "Fullscreen", action = "toggle" }))
+-- Fullscreen_state valid internal / client values Current = -1 | None = 0 | Maximize = 1 | Fullscreen | 2 | Maximize and Fullscreen = 3
+hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen_state({ internal = 0, client = 2, action = "toggle" }))
 
 -- Drag windows by holding mainMod
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag())
@@ -48,6 +48,10 @@ hl.bind(mainMod .. " + CTRL + H", hl.dsp.window.resize({ x = -10, y = 0, relativ
 hl.bind(mainMod .. " + CTRL + L", hl.dsp.window.resize({ x = 10, y = 0, relative = true }))
 hl.bind(mainMod .. " + CTRL + K", hl.dsp.window.resize({ x = 0, y = 10, relative = true }))
 hl.bind(mainMod .. " + CTRL + J", hl.dsp.window.resize({ x = 0, y = -10, relative = true }))
+
+-- While holding down mainMod + D sets the opacity to 60% - BROKEN 
+hl.bind(mainMod .. " + D", hl.dsp.window.set_prop({ prop = "opacity", value = "0.6 0.6 0.6" }), { repeating = true })
+hl.bind(mainMod .. " + D", hl.dsp.window.set_prop({ prop = "opacity", value = "1" }), { release = true })
 
 for i = 1, 10 do
   local key = i % 10 -- 10 maps to key 0
