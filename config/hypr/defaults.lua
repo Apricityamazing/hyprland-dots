@@ -6,5 +6,3 @@ Browser = "firefox"
 MailClient = "betterbird"
 MessagingClient = "vesktop"
 SystemMonitor = "btop"
-
-

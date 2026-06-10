@@ -1,4 +1,4 @@
-hl.on("hyprland.start", function ()
+hl.on("hyprland.start", function()
   -- Hyprland idle management daemon
   hl.exec_cmd("hypridle")
   -- Notification daemon
